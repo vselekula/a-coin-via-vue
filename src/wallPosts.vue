@@ -11,10 +11,17 @@
 </vs-row>
 <vs-row>
   <vs-col>
-      <vs-textarea class="message-input" v-model="textarea" style="border: none"/>
+      <textarea-autosize
+      v-model="textarea"
+      :min-height="1"
+      class="message-input"  style="border: none"></textarea-autosize>
   </vs-col>
 </vs-row>
-
+<vs-row>
+  <vs-col>
+    <vs-button vs-size="large">Large</vs-button>
+  </vs-col>
+</vs-row>
       </vs-col>
       <vs-col class="shop-post" vs-type="flex"  vs-offset="0.5" vs-justify="center" vs-align="center" vs-w="1.5">
       shop
@@ -43,7 +50,9 @@ export default {
     box-shadow: 0px 2px 7px rgba(66, 66, 66, 0.2)
     background: white
     border-radius: 10px
-.vs-textarea
+.message-input
   font-size: 30px !important
   margin-top: 10px
+  width: 100%
+  min-height: 50px !important
 </style>
