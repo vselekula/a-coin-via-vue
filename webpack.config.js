@@ -9,8 +9,7 @@ module.exports = {
     filename: 'build.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/,
         use: [
           'vue-style-loader',
@@ -32,6 +31,14 @@ module.exports = {
           'css-loader',
           'sass-loader?indentedSyntax'
         ],
+      },
+      {
+        test: /\.styl(us)?$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
       },
       {
         test: /\.vue$/,
@@ -70,7 +77,7 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
         loader: "file-loader"
-    }
+      }
     ]
   },
   resolve: {
