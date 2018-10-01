@@ -2,7 +2,7 @@
 
   <div id="parentx">
 
-    <vs-button @click="active=!active, notExpand = false" vs-color="success" vs-type="filled">Open Sidebar Reduce-expand</vs-button>
+    <!-- <vs-button @click="active=!active, notExpand = false" vs-color="success" vs-type="filled">Open Sidebar Reduce-expand</vs-button> -->
     <vs-sidebar :reduce="reduce" :reduce-not-hover-expand="notExpand" :hidden-background="HidBG" parent="body" default-index="1"  color="primary" class="sidebarx" spacer v-model="active">
 
       <div class="header-sidebar" slot="header">
