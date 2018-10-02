@@ -1,7 +1,15 @@
 <template>
 <div id="app">
   <AppHeader></AppHeader>
-  <AppWallPosts></AppWallPosts>
+  <vs-row class="posts-wrapper" vs-justify="center">
+    <vs-col vs-w="3.5">
+      <AppWallPosts></AppWallPosts>
+    </vs-col>
+    <vs-col vs-w="1.5">
+      <AppShopPosts></AppShopPosts>
+      <AppButtonAdd></AppButtonAdd>
+    </vs-col>
+  </vs-row>
   <AppAside></AppAside>
 </div>
 </template>
@@ -9,6 +17,9 @@
   import aside from './asidebar.vue';
   import header from './header.vue';
   import wallPosts from './wallPosts.vue';
+  import shopPosts from './shopPosts.vue';
+  import button from './button.vue';
+  import buttonAdd from './buttonAdd.vue';
   export default {
     data(){
       return {
@@ -18,7 +29,10 @@
     components: {
       AppAside: aside,
       AppHeader: header,
-      AppWallPosts: wallPosts
+      AppWallPosts: wallPosts,
+      AppShopPosts: shopPosts,
+      AppButton: button,
+      AppButtonAdd: buttonAdd
     }
   }
 </script>
@@ -30,5 +44,9 @@ body
 
 button
   font-family: Lato
+.posts-wrapper
+    margin-top: -63px
+
+
 
 </style>
